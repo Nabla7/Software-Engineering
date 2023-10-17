@@ -532,5 +532,21 @@ Collection of factoids and such things from our software engineering course at U
    > - Identifying architectural approaches and quality attribute goals.
    > - Evaluating how well approaches satisfy quality goals.
    > - Identifying sensitivity and tradeoff points.
-   > - Presenting results to stakeholders for
+   > - Presenting results to stakeholders for informed decision making.
+
+#### 8. How can you balance emergent design with intentional architecture?
+
+   >Emergent design evolves with changing requirements, while intentional architecture is planned up front. To balance, start with a clear, intentional architecture to set direction, but remain open to evolving the design as more is learned about requirements, technologies, and other factors during development.
+
+#### 9. What happens when your team goes outside the boundaries of the guardrail?
+   >Guardrails provide guidelines or constraints for a project. If a team goes outside these boundaries, it may introduce risks, technical debt, or deviations from the project's goals. It may require corrective actions, discussions with stakeholders, or adjustments to the guardrails themselves.
+
+#### 10. How would you organize an architecture assessment in your team?
+
+>An architecture assessment can be organized by:
+   > - Defining clear objectives for the assessment.
+   > - Assembling a diverse team including architects, developers, testers, and possibly external experts.
+   > - Reviewing documentation and conducting interviews or workshops to understand the architecture.
+   > - Using techniques like ATAM to evaluate the architecture against desired quality attributes.
+   > - Documenting findings, recommendations, and presenting them to stakeholders.
 
