@@ -550,3 +550,188 @@ Collection of factoids and such things from our software engineering course at U
    > - Using techniques like ATAM to evaluate the architecture against desired quality attributes.
    > - Documenting findings, recommendations, and presenting them to stakeholders.
 
+
+
+
+
+# Software-Engineering
+
+Continued factoids and points from the software engineering course at University of Antwerp
+
+---
+
+## Week 4: Project Management and Scrum Enhancements
+
+### Summary (i)
+
+#### 1. Name the five activities covered by project management.
+
+   > The five core activities covered by project management are:
+   > - **Initiation**: Defining the project scope and objectives.
+   > - **Planning**: Detailing the project's steps, resources, and timeline.
+   > - **Execution**: Implementing the plan and coordinating people and resources.
+   > - **Monitoring and Controlling**: Tracking progress, making adjustments as necessary, and ensuring objectives are met.
+   > - **Closing**: Completing the project and evaluating its success.
+
+#### 2. What is a milestone? What can you use them for?
+
+   > A **milestone** is a significant event or achievement in the project timeline. Milestones can be used to:
+   > - Mark key decision points.
+   > - Indicate the completion of major project phases or deliverables.
+   > - Provide checkpoints for evaluating progress and making adjustments.
+
+#### 3. What is a critical path? Why is it important to know the critical path?
+
+   > The **critical path** is the sequence of stages determining the minimum time needed to complete the project. Knowing the critical path is important because:
+   > - It highlights the most important tasks.
+   > - Delays in critical path tasks delay the entire project.
+   > - It aids in optimal resource allocation and risk management.
+
+#### 4. What can you do to recover from delays on the critical path?
+
+   > To recover from critical path delays:
+   > - **Fast Tracking**: Performing tasks in parallel that were initially planned in sequence.
+   > - **Crashing**: Allocating more resources to critical tasks to complete them faster.
+   > - **Adjusting Scope**: Reducing or modifying project requirements.
+   > - **Reallocating Resources**: Shifting resources from non-critical to critical tasks.
+
+#### 5. How can you use Gantt-charts to optimize the allocation of resources to a project?
+
+   > **Gantt-charts** visually represent the project timeline, tasks, and their durations. To optimize resource allocation:
+   > - Identify overlapping tasks and distribute resources to avoid conflicts.
+   > - Allocate resources to critical path tasks first to prevent delays.
+   > - Visualize resource availability and adjust task timelines accordingly.
+   > - Identify idle periods and reallocate resources to maximize utilization.
+
+#### 6. What is a “Known known”, and “Unknown known” and an “Unknown Unknown”?
+
+   > - **Known Known**: These are things we know that we know. They are clear aspects of the project, like defined requirements.
+   > - **Unknown Known**: These are things we don't know that we actually know. They might be subconscious or overlooked aspects that team members are aware of but haven't communicated.
+   > - **Unknown Unknown**: These are things we don't know that we don't know. They represent unforeseen challenges or risks that arise during the project.
+
+#### 7. How do you use PERT to calculate the risk of delays to a project?
+
+   > PERT (Program Evaluation and Review Technique) involves:
+   > - Estimating the shortest, most likely, and longest time to complete each task.
+   > - Calculating the expected time and variance for each task.
+   > - Determining the critical path and its overall expected time and variance.
+   > - Using the variance to assess the risk of project delays.
+
+#### 8. Why does replacing a person imply a negative productivity?
+
+   > Replacing a team member can:
+   > - Cause a learning curve for the new member.
+   > - Disrupt team dynamics and collaboration.
+   > - Result in loss of domain-specific knowledge from the departing member.
+   > - Require training and onboarding time, reducing immediate productivity.
+
+#### 9. What’s the difference between the 0/100; the 50/50 and the milestone technique for calculating the earned value?
+
+   > - **0/100**: Earned value is only recognized once the task is fully completed.
+   > - **50/50**: 50% of the value is recognized at the start of the task, and 50% upon completion.
+   > - **Milestone**: Earned value is recognized based on predefined milestones within the task.
+
+#### 10. Why shouldn’t managers take on tasks in the critical path?
+
+   > Managers taking on critical path tasks can:
+   > - Divert them from their primary roles of oversight and coordination.
+   > - Create bottlenecks if they're unable to prioritize the task.
+   > - Risk the project if they're unable to complete the task as effectively as a specialized team member.
+
+#### 11. What is the “definition of done” in a Scrum project?
+
+   > The “definition of done” in Scrum provides a clear and shared understanding among the team of what it means for a task, feature, or user story to be considered complete. It ensures consistency, quality, and that all acceptance criteria, testing, documentation, and other necessary activities have been addressed.
+
+#### 12. Give a definition for a Squad, Tribe, Chapter and Guild in the spotify scrum model.
+
+   > - **Squad**: A small cross-functional team focused on a specific feature or product area.
+   > - **Tribe**: A larger collection of squads that work in related areas.
+   > - **Chapter**: A group of individuals with similar skills or roles (e.g., all backend developers) from different squads.
+   > - **Guild**: A community of members from across the organization interested in sharing knowledge on a specific topic.
+
+### Summary (ii)
+
+#### 1. Name the various activities covered by project management. Which ones do you consider most important? Why?
+
+   > Project management activities include:
+   > - Initiation
+   > - Planning
+   > - Execution
+   > - Monitoring and Controlling
+   > - Closing
+   
+   > I consider **Planning** and **Monitoring and Controlling** as most important. Planning sets the direction and expectations for the entire project, while Monitoring and Controlling ensures the project stays on track and adapts to any unforeseen challenges.
+
+#### 2. How can you ensure traceability between the plan and the requirements/system?
+
+   > Traceability can be ensured by:
+   > - Using traceability matrices to map requirements to specific tasks, milestones, or deliverables.
+   > - Embedding requirement identifiers in design documents, code comments, and test cases.
+   > - Using specialized tools that link requirements to project artifacts.
+   > - Regularly reviewing and updating the traceability artifacts as requirements evolve.
+
+#### 3. Compare PERT-charts with Gantt charts for project planning and monitoring.
+
+   > **PERT Charts**:
+   > - Focus on task sequences and dependencies.
+   > - Show the critical path and task durations.
+   > - Useful for understanding task relationships and project flow.
+   
+   > **Gantt Charts**:
+   > - Display tasks against time.
+   > - Show when each task starts and ends.
+   > - Useful for resource allocation and monitoring project progress.
+   
+   > While both are valuable, Gantt charts offer a clearer visual representation of the timeline, while PERT charts emphasize task dependencies.
+
+#### 4. How can you deal with “Unknown Unknowns” during project planning?
+
+   > Dealing with “Unknown Unknowns” involves:
+   > - Building contingencies into the schedule and budget.
+   > - Encouraging open communication so that unforeseen issues are identified and addressed quickly.
+   > - Adopting an iterative approach, allowing for regular reviews and adjustments.
+   > - Conducting regular risk assessments to identify and mitigate potential unknowns.
+
+#### 5. Choose between managing a project that is expected to deliver soon but with a large risk for delays, or managing a project with the same result delivered late but with almost no risk for delays. Can you argue your choice?
+
+   > I would choose managing a project with the same result delivered late but with almost no risk for delays. Predictability and reliability can often outweigh speed, especially when stakeholders are involved. A project with minimal risks ensures better planning, resource allocation, and stakeholder management. However, this decision would also depend on the specific context and the nature of the project's deliverables.
+
+#### 6. Describe how earned-value analysis can help you for project monitoring.
+
+   > Earned-value analysis provides a snapshot of project performance by comparing the planned progress (Planned Value) to the actual progress (Earned Value) and the actual costs (Actual Cost). It helps in:
+   > - Identifying cost overruns or schedule slippages early.
+   > - Gauging project health and forecasting future performance.
+   > - Making informed decisions based on actual vs. planned metrics.
+
+#### 7. Would you consider bending slip lines as a good sign or a bad sign? Why?
+
+   > Bending slip lines generally indicate a deviation from the planned schedule. If the slip line bends towards the time axis, it's a bad sign, indicating the project is falling behind schedule. If it bends away, it's a good sign, indicating the project is ahead of schedule.
+
+#### 8. You’re a project leader and one of your best team members announces that she is pregnant. You’re going to your boss, asking for a replacement and for an extension of the project deadline. How would you argue the latter request?
+
+   > I would argue that:
+   > - The departing team member possesses critical skills and knowledge that will take time for a replacement to acquire.
+   > - The onboarding and ramp-up period for the new member will affect productivity.
+   > - The change in team dynamics might slow down the project initially as the team adjusts.
+   > - Ensuring a smooth transition and maintaining quality requires additional time.
+
+#### 9. You have to manage a project team of 5 persons for building a C++ compiler. Which team structure and member roles would you choose? Why?
+
+   > For a C++ compiler project, I'd structure the team as:
+   > - **Lead Developer/Architect**: Oversees design, ensures alignment with technical standards.
+   > - **Front-end Developer**: Focuses on lexical analysis, parsing, and syntax tree generation.
+   > - **Back-end Developer**: Handles optimization, code generation, and target machine code.
+   > - **Test Engineer**: Responsible for testing the compiler against various codebases, identifying bugs.
+   > - **Documentation/Support Engineer**: Manages documentation, user feedback, and support.
+   
+   > This structure ensures each critical aspect of compiler development is addressed by a dedicated expert.
+
+#### 10. Can you give some advantages and disadvantages of scrum component teams and scrum feature teams.
+
+   > **Scrum Component Teams**:
+   > - **Advantages**: Deep expertise in specific components; Clear ownership of components.
+   > - **Disadvantages**: Potential for silos; Might struggle with end-to-end feature delivery.
+   
+   > **Scrum Feature Teams**:
+   > - **Advantages**: Can deliver end-to-end features; Promotes broader skill sets and understanding.
+   > - **Disadvantages**: Might lack deep expertise in specific components; Potential for overlapping work on shared components.
