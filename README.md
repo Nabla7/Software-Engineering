@@ -735,3 +735,137 @@ Continued factoids and points from the software engineering course at University
    > **Scrum Feature Teams**:
    > - **Advantages**: Can deliver end-to-end features; Promotes broader skill sets and understanding.
    > - **Disadvantages**: Might lack deep expertise in specific components; Potential for overlapping work on shared components.
+
+---
+
+### Week 5: Design by Contract
+
+### Summary (i)
+
+#### 1. What is the distinction between Testing and Design by Contract? Why are they complementary techniques?
+   
+   > **Testing**: The process of executing a program or system to find errors.
+   
+   > **Design by Contract (DbC)**: Specifies precise and verifiable interface specifications for software components, which includes preconditions, postconditions, and invariants.
+   
+   > While testing aims to find and rectify bugs in a system, DbC establishes clear expectations for a component's behavior, helping prevent bugs. They're complementary because DbC sets the expectations, and testing verifies them.
+
+#### 2. What’s the weakest possible condition in logic terms? And the strongest?
+   
+   > The **weakest possible condition** is always true (`True`), and the **strongest possible condition** is always false (`False`).
+
+#### 3. If you have to implement an operation on a class, would you prefer weak or strong conditions for pre- and postcondition? And what about the class invariant?
+   
+   > - **Precondition**: Prefer weaker conditions to allow more flexibility for callers.
+   > - **Postcondition**: Prefer stronger conditions to guarantee specific results after the operation.
+   > - **Class Invariant**: Should be strong to ensure the consistency of the class's state.
+
+#### 4. If a subclass overrides an operation, what is it allowed to do with the pre- and postcondition? And what about the class invariant?
+   
+   > - **Precondition**: Can be kept the same or weakened.
+   > - **Postcondition**: Can be kept the same or strengthened.
+   > - **Class Invariant**: Must remain unchanged.
+
+#### 5. Compare Testing and Design by contract using the criteria “Correctness” and “Traceability”.
+   
+   > - **Correctness**: 
+   >   - Testing: Ensures correctness by finding and fixing bugs.
+   >   - DbC: Ensures correctness by defining clear contracts that the system must adhere to.
+   > - **Traceability**: 
+   >   - Testing: Provides traceability by linking test cases to requirements.
+   >   - DbC: Directly ties the expectations (contracts) to the implementation, enhancing traceability.
+
+#### 6. What’s the Liskov substitution principle? Why is it important in OO development?
+   
+   > The **Liskov substitution principle** states that objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program. It's crucial in OO development to ensure that a subclass truly represents a subtype of the superclass, maintaining system integrity.
+
+#### 7. What is behavioral subtyping?
+   
+   > **Behavioral subtyping** is a form of polymorphism where a subclass maintains the expected behavior of its superclass. It ties closely to the Liskov substitution principle.
+
+#### 8. When is a pre-condition reasonable?
+   
+   > A pre-condition is reasonable when it specifies necessary and sufficient conditions for a method to execute correctly without being overly restrictive.
+
+#### Tasks:
+   
+   - **Pre- and post-conditions for `top` and `isEmpty` in Stack**:
+     > **top**:
+     > - Pre-condition: Stack is not empty.
+     > - Post-condition: Returns the top element without modifying the stack.
+     > 
+     > **isEmpty**:
+     > - Pre-condition: None.
+     > - Post-condition: Returns `true` if stack is empty, `false` otherwise.
+     > 
+     > If a `size` method is added:
+     > - Pre-condition: None.
+     > - Post-condition: Returns the number of elements in the stack.
+   
+   - **Design by Contract for class Rectangle**:
+     > **move(dx, dy)**:
+     > - Pre-condition: None.
+     > - Post-condition: The rectangle's position is changed by `(dx, dy)`.
+     > 
+     > **resize(width, height)**:
+     > - Pre-condition: `width` and `height` are positive.
+     > - Post-condition: The rectangle's dimensions are updated to the new width and height.
+
+   - **Consumer-driven contracts for a REST-API**:
+     > It would involve consumers specifying their expectations and needs from an API, and these contracts being verified against the actual API to ensure compatibility.
+
+### Summary(ii)
+
+#### 1. Why are redundant checks not a good way to support Design by Contract?
+
+   > Redundant checks go against the principles of Design by Contract (DbC) as they introduce unnecessary complexity and potential inconsistencies. The essence of DbC is clear delineation of responsibilities; when a contract is defined, it should be trusted. Redundant checks can:
+   > - Waste computational resources.
+   > - Obscure code, making maintenance more challenging.
+   > - Create confusion about the true source of truth in a system.
+
+#### 2. You’re a project manager for a weather forecasting system, where performance is a real issue. Set-up some guidelines concerning assertion monitoring and argue your choice.
+
+   > **Guidelines for Assertion Monitoring**:
+   > - **Selective Monitoring**: Given performance concerns, enable assertions only in critical paths or high-risk components.
+   > - **Environment-based Activation**: Activate assertions in development and testing environments, but consider disabling them in production.
+   > - **Threshold-based Monitoring**: Use assertions to monitor deviations beyond acceptable performance thresholds.
+   > 
+   > The rationale is to strike a balance between ensuring system correctness and optimizing performance. Monitoring only the most crucial parts ensures potential errors are caught without excessive overhead.
+
+#### 3. If you have to buy a class from an outsourcer in India, would you prefer a strong precondition over a weak one? And what about the postcondition?
+
+   > - **Precondition**: I would prefer a **strong precondition** as it clearly specifies the requirements the client must fulfill for the class to function correctly. This reduces ambiguity and helps ensure that the class works as expected.
+   > - **Postcondition**: I would also prefer a **strong postcondition** as it guarantees specific outcomes given the preconditions are met. This gives clarity on what to expect from the class after its execution.
+   
+#### 4. Do you feel that design by contract yields software systems that are defect free? If you do, argue why. If you don’t, argue why it is still useful.
+
+   > I don't believe that Design by Contract (DbC) guarantees defect-free software. However, it is still valuable because:
+   > - **Clarity of Responsibilities**: DbC clearly defines expectations between modules or components, reducing integration issues.
+   > - **Facilitates Testing**: Well-defined contracts provide a basis for focused and effective testing.
+   > - **Documentation**: Contracts serve as in-built documentation, aiding maintenance and onboarding.
+   > - **Reduces Ambiguity**: Clearly defined preconditions and postconditions reduce potential misunderstandings.
+   
+#### 5. How can you ensure the quality of the pre- and postconditions?
+
+   > Ensuring the quality of pre- and postconditions involves:
+   > - **Thorough Review**: Conduct peer reviews to identify potential oversights.
+   > - **Test Against Contracts**: Design tests based on the contracts to verify their accuracy.
+   > - **Iterative Refinement**: As the system evolves, revisit and adjust contracts accordingly.
+   > - **Use Formal Methods**: Employ formal methods or tools that facilitate rigorous contract definition.
+   
+#### 6. Why is (consumer-driven) contract testing so relevant in the context of microservices?
+
+   > **Consumer-driven contract testing** is crucial for microservices because:
+   > - **Decoupled Development**: Allows teams to develop, test, and deploy services independently.
+   > - **Ensures Compatibility**: Verifies that changes in one service don't break dependent services.
+   > - **Facilitates Evolution**: Ensures that services can evolve without unexpected regressions.
+   > - **Promotes Clear Communication**: Encourages clear expectations between service providers and consumers.
+   
+#### 7. Assume you have an existing software system and you are a software quality engineer assigned to apply design by contract. How would you start? What would you do?
+
+   > - **Audit Existing System**: Begin by understanding the current system's components, interfaces, and dependencies.
+   > - **Identify Critical Components**: Prioritize components with the most dependencies or highest risk.
+   > - **Draft Initial Contracts**: Define initial preconditions, postconditions, and invariants for these components.
+   > - **Review with Stakeholders**: Collaborate with developers, testers, and architects to refine contracts.
+   > - **Implement Contracts**: Use contract enforcement tools or mechanisms to integrate contracts into the system.
+   > - **Iterative Enhancement**: Over time, expand the coverage of contracts across the system and refine existing contracts as needed.
