@@ -911,3 +911,41 @@ Collection of factoids and such things from our software engineering course at U
 10. **What is the difference between stress-testing and performance testing?**
     > - Stress testing involves evaluating how the system behaves under extreme conditions, such as high load or traffic, which is beyond the system's specifications.
     > - Performance testing measures the system's performance, such as response time, reliability, and resource usage under a particular workload.
+
+### Summary (ii)
+
+1. **You’re responsible for setting up a test program. To whom will you assign the responsibility to write tests? Why?**
+   > - The responsibility for writing tests is often assigned to the person or team developing the unit or feature. This is because they have the deepest understanding of the implementation and the intended behavior, which allows them to write more effective and comprehensive tests. It is also a best practice to write tests first, even before the code (Test-Driven Development), as it can lead to better-designed software.
+
+2. **Why do we distinguish between several levels of testing in the V-model?**
+   > - Different levels of testing in the V-model address different scopes and aspects of the software. For example, unit tests check individual components for correct behavior, integration tests verify that these components work together as expected, and system tests evaluate the complete and integrated software system against the specified requirements. This hierarchical approach ensures thorough testing at different stages of software development.
+
+3. **Explain why basis path testing, condition testing, and loop testing complement each other.**
+   > - These testing methods target different structural elements of the code. Basis path testing ensures that all possible paths through the code are executed. Condition testing verifies every possible outcome of boolean expressions. Loop testing focuses on the correctness of loop constructs. Together, they provide a comprehensive check of the code logic and structure.
+
+4. **Why is mutation coverage a better criterion for assessing the strength of a test suite?**
+   > - Mutation coverage measures the effectiveness of a test suite by introducing changes or mutations to the code and checking if the tests can detect them. It's considered better because it can reveal whether the tests can catch errors and not just whether they cover the code.
+
+5. **Explain fuzzing (fuzz testing) in your own words.**
+   > - Fuzz testing involves providing random, unexpected, or invalid data inputs to a software system to find vulnerabilities and errors. It's useful for discovering security flaws that might not be found through conventional testing methods.
+
+6. **Explain what FIT tables are.**
+   > - FIT tables, part of the Framework for Integrated Testing, are a way to specify and conduct acceptance tests by providing a tabular format where testers can define inputs and expected outputs in a way that can be directly executed as tests.
+
+7. **When would you combine top-down testing with bottom-up testing? Why?**
+   > - Combining top-down with bottom-up testing can leverage the strengths of both. Top-down allows for early stub testing of high-level functions, while bottom-up tests lower-level components first. Together, they ensure comprehensive coverage of the system.
+
+8. **When would you combine black-box testing with white-box testing? Why?**
+   > - Combining black-box and white-box testing allows testers to cover both functional and structural aspects of the software. Black-box testing ensures that the software meets user requirements without regard to internal workings, while white-box testing ensures that the internal operations are performed as intended.
+
+9. **Is it worthwhile to apply white-box testing in an OO context?**
+   > - While white-box testing is less relevant in object-oriented contexts due to encapsulation and abstraction, it can still provide value in testing the interactions and integrations between objects, as well as ensuring that all logic paths are tested.
+
+10. **What makes regression testing important?**
+    > - Regression testing is important because it ensures that new code changes do not adversely affect existing functionality. It's crucial for maintaining software quality over time, especially as software systems grow and evolve.
+
+11. **Is it acceptable to deliver a system that is not 100% reliable? Why (not)?**
+    > - While 100% reliability is often the goal, it may not always be feasible or cost-effective. The acceptable level of reliability depends on the risk associated with potential failures, the criticality of the system, and the impact on users.
+
+12. **Explain the subtle difference between code coverage and test coverage.**
+    > - Code coverage measures how much of the code is executed by the tests, while test coverage assesses how much of the functional requirements are verified by the tests. High code coverage doesn't guarantee that all functional scenarios are tested, whereas test coverage focuses on the breadth of testing in terms of requirements satisfaction.
