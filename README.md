@@ -550,14 +550,6 @@ Collection of factoids and such things from our software engineering course at U
    > - Using techniques like ATAM to evaluate the architecture against desired quality attributes.
    > - Documenting findings, recommendations, and presenting them to stakeholders.
 
-
-
-
-
-# Software-Engineering
-
-Continued factoids and points from the software engineering course at University of Antwerp
-
 ---
 
 ## Week 4: Project Management and Scrum Enhancements
@@ -869,3 +861,53 @@ Continued factoids and points from the software engineering course at University
    > - **Review with Stakeholders**: Collaborate with developers, testers, and architects to refine contracts.
    > - **Implement Contracts**: Use contract enforcement tools or mechanisms to integrate contracts into the system.
    > - **Iterative Enhancement**: Over time, expand the coverage of contracts across the system and refine existing contracts as needed.
+
+---
+
+### Week 6: Testing
+
+### Summary (i)
+
+1. **What is (a) Testing, (b) a Testing Technique, (c) a Testing Strategy?**
+   > - (a) Testing is the process of executing a program with the intent of finding errors.
+   > - (b) A Testing Technique is a method or procedure used to determine how to test an application for errors systematically.
+   > - (c) A Testing Strategy is a high-level approach to test planning and execution to ensure that the application meets its objectives and requirements.
+
+2. **What is the difference between an error, a failure, and a defect?**
+   > - An error is a human action that produces an incorrect result.
+   > - A failure is a deviation of the software from its expected delivery or service.
+   > - A defect is an imperfection or deficiency in the product that fails to meet its requirements.
+
+3. **What is a test case? A test stub? A test driver? A test fixture?**
+   > - A test case is a set of conditions under which a tester will determine whether an application or software system is working correctly.
+   > - A test stub is a piece of code used to simulate the behavior of some module in controlled ways.
+   > - A test driver is a program or test tool used to execute a test harness, which orchestrates the testing and collects the results.
+   > - A test fixture sets up the conditions necessary for a test.
+
+4. **What are the differences and similarities between basis path testing, condition testing, and loop testing?**
+   > - Basis path testing is a white-box testing technique that involves creating test cases based on flows or paths within a module.
+   > - Condition testing is focused on the boolean expression and decision points within the code.
+   > - Loop testing specifically targets the validity of loop constructs within the code.
+   > - They are similar in that they are all white-box testing methods, which means they require knowledge of the internal workings of the program.
+
+5. **How many tests should you write to achieve MC/DC coverage? And multiple condition coverage?**
+   > - For MC/DC (Modified Condition/Decision Coverage), you need enough tests to cover all the combinations of conditions in a decision that can independently affect the outcome of the decision.
+   > - Multiple condition coverage requires a test case for all possible combinations of conditions, so the number depends on the number of conditions.
+
+6. **Where do you situate alpha/beta testing in the four quadrants model?**
+   > - Alpha and Beta testing would be situated in Quadrant 2 of the Agile Testing Quadrants, which is about testing business-facing applications where the tests are carried out by the business.
+
+7. **What are the differences and similarities between unit testing and regression testing?**
+   > - Unit testing is performed to check individual units or components of a software, whereas regression testing is performed to ensure that a recent program or code change has not adversely affected existing features.
+   > - Both are systematic testing strategies and can be automated. They aim to identify defects early and ensure that the software is working as expected.
+
+8. **How do you know when you tested enough?**
+   > - This is often determined by the test coverage and the criticality of the application. Testing should cover all functional and non-functional requirements, all code paths, and user scenarios. It's also influenced by the risk assessment and when the failure rate falls below a certain threshold.
+
+9. **What is Alpha-testing and Beta-Testing? When is it used?**
+   > - Alpha testing is an internal validation effort to identify bugs before releasing the product to real users or the public. Beta testing is the next phase, where a version of the product is released to a limited audience outside of the company but not yet publicly available.
+   > - These are used after rigorous in-house testing and before the final release of the software to the public.
+
+10. **What is the difference between stress-testing and performance testing?**
+    > - Stress testing involves evaluating how the system behaves under extreme conditions, such as high load or traffic, which is beyond the system's specifications.
+    > - Performance testing measures the system's performance, such as response time, reliability, and resource usage under a particular workload.
