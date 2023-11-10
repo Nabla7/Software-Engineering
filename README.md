@@ -949,3 +949,73 @@ Collection of factoids and such things from our software engineering course at U
 
 12. **Explain the subtle difference between code coverage and test coverage.**
     > - Code coverage measures how much of the code is executed by the tests, while test coverage assesses how much of the functional requirements are verified by the tests. High code coverage doesn't guarantee that all functional scenarios are tested, whereas test coverage focuses on the breadth of testing in terms of requirements satisfaction.
+
+
+### Week 7 : Formal Specification
+
+### Summary (i) :
+
+1. **Why is a UML class diagram a semi-formal specification?**
+   - A UML class diagram is considered a semi-formal specification because it is based on a notation with precise syntax but loose semantics. This means that while the structure and relationships between elements are well-defined, the exact meaning or interpretation of these elements may not be strictly formalized.
+
+2. **What is an automated theorem prover?**
+   - An automated theorem prover is a tool that supports the process of formally verifying specifications by mathematically proving that certain conditions hold. These provers use logic and mathematical reasoning to confirm that given preconditions lead to specific postconditions, as defined in the specification.
+
+3. **What is the distinction between “partially correct” and “totally correct”?**
+   - The distinction lies in the concept of termination of a function or procedure:
+     - Partially Correct: Assuming the precondition is true just before the function executes, if the function terminates, the postcondition is true. Infinite loops or raising exceptions is allowed.
+     - Totally Correct: Again, assuming the precondition is true before function execution, the function is guaranteed to terminate and when it does, the postcondition is true.
+
+4. **Give the mathematical definition for the weakest precondition of a Hoare triple {P} S {Q}**
+   - The weakest precondition for a Hoare triple {P} S {Q} is defined as the least restrictive precondition that needs to hold before executing statement S to ensure that postcondition Q holds after S is executed. Mathematically, it can be denoted as `wp(S, Q)`, meaning that for all preconditions `P'` such that `{P'} S {Q}`, it follows that `P'` implies `P`.
+
+5. **Why is it necessary to complement sequence diagrams with statecharts?**
+   - Sequence diagrams and statecharts serve complementary purposes in modeling system behavior. Sequence diagrams are great for depicting interactions and message sequences between objects over time, showing how processes operate with one another. However, they do not effectively represent the different states an object can be in or the transitions between these states. Statecharts fill this gap by showing the various states of an object and how it transitions from one state to another, providing a more complete understanding of the system’s behavior.
+
+6. **What is the notation for the start and termination state on a statechart? What is the notation for a guard expression on an event?**
+   - In statecharts, the start state is often represented by a solid circle and the termination state by a circle with a solid circle inside it. Guard expressions on an event are conditions that must be true for the transition to occur and are usually written in square brackets `[ ]` following the event name.
+
+7. **What does it mean for a statechart to be (a) consistent (b) complete and (c) unambiguous?**
+   - (a) Consistent: Every state in the statechart is reachable from the initial state, and the final state is reachable from every other state.
+   - (b) Complete: Every possible event/state pair has a defined transition in the statechart.
+   - (c) Unambiguous: No event, including guard conditions, appears more than once in the transitions leaving any given state, ensuring deterministic behavior.
+
+8. **How does a formal specification contribute to the correctness of a given system?**
+   - Formal specifications contribute to the correctness of a system by providing a mathematically precise description of the system’s behavior and properties. This allows for rigorous verification of the system against its requirements, ensuring that it behaves as intended under all defined conditions. Formal specifications also enable the generation of test cases that cover all aspects of the system’s functionality, further ensuring its correctness.
+
+
+You should be able to complete the following tasks
+  - Use a theorem prover (Daphny) to prove that a given piece of code is correct. 
+  - Create a statechart specification for a given problem.
+  - Given a statechart specification, derive a test model using path testing.
+
+### Summary (ii) :
+
+1. **(Based on the article “A Formal Approach to Constructing Secure Air Vehicle Software”.)
++ What is according to you the most effective means to achieve “provably secure against cyberattacks”?**
+   - Based on the article "A Formal Approach to Constructing Secure Air Vehicle Software," the most effective means to achieve software that is "provably secure against cyberattacks" involves a combination of formal methods in software development and rigorous testing. Formal methods, like formal specifications and automated theorem proving, provide a mathematically sound basis for verifying the correctness and security of software algorithms and architectures. This approach is complemented by thorough testing, including penetration testing and scenario-based testing, to ensure the software is resilient to known and emerging cyber threats.
+
+2. **Why is it likely that you will encounter formal specifications?**
+   - Formal specifications are likely to be encountered in complex, high-stakes, or safety-critical systems where precision, correctness, and reliability are paramount. Examples include aerospace, automotive, financial systems, and medical devices. The growing complexity of software and the increasing importance of cybersecurity further drive the adoption of formal specifications in these areas.
+
+3. **Explain why we need both the loop variant and the loop invariant for proving total
+correctness of a loop?**
+   - For proving total correctness of a loop, both the loop invariant and loop variant are essential. The loop invariant is a condition that holds true before and after each iteration of the loop, ensuring the correctness of the loop's functionality. The loop variant, on the other hand, is a measure (usually a non-negative integer) that decreases with each iteration and ensures that the loop terminates. The combination of these two proves that the loop works correctly (invariant) and eventually terminates (variant).
+
+4. **What do you think happened with the bug report on the broken Java.utils.Collection.sort
+()? Why do you think this happened?**
+   - The incident with the bug in `Java.utils.Collection.sort()` likely occurred due to an oversight in handling edge cases or incorrect assumptions in the algorithm. Such bugs often arise from complex interactions within the code or unexpected inputs that were not fully considered during development. It highlights the importance of thorough testing and the potential limitations of informal or semi-formal verification methods in capturing all possible scenarios.
+
+5. **Explain the relationship between “Design By Contract” on the one hand “State based
+specifications” on the other hand.**
+   - "Design by Contract" (DbC) and state-based specifications are complementary concepts in software design. DbC focuses on the explicit specification of contractual obligations between a method and its clients (preconditions, postconditions, and invariants), thereby ensuring a clear and formal understanding of how methods should behave. State-based specifications, on the other hand, describe the allowed states of a system and the transitions between these states. They provide a high-level view of the system's behavior over time. DbC can be seen as specifying the contract at a method level, while state-based specifications provide a broader, system-level view.
+
+6. **Explain the relationship between “Testing” on the one hand and “State based
+specifications” on the other hand.**
+   - Testing and state-based specifications also have a complementary relationship. State-based specifications provide a formal description of the expected states and state transitions of a system, which can be used to derive test cases. These test cases can validate whether the system correctly implements the specified states and transitions. Testing, in this context, becomes a means to empirically verify that the state-based specifications have been correctly implemented in the system.
+
+7. **You are part of a team build a fleet management system for drones transporting medical
+goods between hospitals. You must secure the system against cyber-attacks. Your boss asks you to look into formal specs; which ones would you advise and why?**
+   - For securing a drone fleet management system against cyber-attacks, I would advise considering formal specifications that focus on security, reliability, and real-time requirements. Specifications like Z notation or Alloy could be used for modeling complex data and interactions, while Temporal Logic could be employed for specifying and verifying real-time constraints. Additionally, considering automated theorem provers and model checking tools would be beneficial to rigorously verify the correctness and security of the system against the specified requirements. The choice of formal specifications would be driven by the need to ensure not just functional correctness but also resilience against potential cyber threats, given the critical nature of transporting medical goods.
+
+
