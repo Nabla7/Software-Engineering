@@ -430,7 +430,6 @@ Collection of factoids and such things from our software engineering course at U
 
 ---
 
-
 ### Summary (i)
 
 #### 1. What’s the role of a software architecture?
@@ -730,7 +729,7 @@ Collection of factoids and such things from our software engineering course at U
 
 ---
 
-### Week 5: Design by Contract
+## Week 5: Design by Contract
 
 ### Summary (i)
 
@@ -864,7 +863,7 @@ Collection of factoids and such things from our software engineering course at U
 
 ---
 
-### Week 6: Testing
+## Week 6: Testing
 
 ### Summary (i)
 
@@ -951,7 +950,7 @@ Collection of factoids and such things from our software engineering course at U
     > - Code coverage measures how much of the code is executed by the tests, while test coverage assesses how much of the functional requirements are verified by the tests. High code coverage doesn't guarantee that all functional scenarios are tested, whereas test coverage focuses on the breadth of testing in terms of requirements satisfaction.
 
 
-### Week 7 : Formal Specification
+## Week 7 : Formal Specification
 
 ### Summary (i) :
 
@@ -1018,4 +1017,111 @@ specifications” on the other hand.**
 goods between hospitals. You must secure the system against cyber-attacks. Your boss asks you to look into formal specs; which ones would you advise and why?**
    - For securing a drone fleet management system against cyber-attacks, I would advise considering formal specifications that focus on security, reliability, and real-time requirements. Specifications like Z notation or Alloy could be used for modeling complex data and interactions, while Temporal Logic could be employed for specifying and verifying real-time constraints. Additionally, considering automated theorem provers and model checking tools would be beneficial to rigorously verify the correctness and security of the system against the specified requirements. The choice of formal specifications would be driven by the need to ensure not just functional correctness but also resilience against potential cyber threats, given the critical nature of transporting medical goods.
 
+## Week 8 : Domain Modelling 2023 
 
+### Summary (i) 
+
+#### Question 1: Why is it necessary to validate and analyze the requirements?
+**Answer:** 
+- **Validation of requirements** ensures that the system being developed aligns with the actual needs and expectations of the stakeholders, answering the question: "Are we building the right system?"
+- **Analysis of requirements** helps in understanding the problem correctly and ensuring the problem domain is adequately modeled, addressing the question: "Did we understand the problem correctly?"
+
+#### Question 2: What’s the decomposition principle for functional and object-oriented decomposition?
+**Answer:** 
+- **Functional Decomposition:** Breaks down a complex process or system into simpler, manageable sub-processes or functions.
+- **Object-Oriented Decomposition:** Involves breaking down a system based on the objects in the system, focusing on their attributes and behaviors.
+
+#### Question 3: Can you give the advantages and disadvantages for functional decomposition? What about object-oriented decomposition?
+**Answer:** 
+- **Functional Decomposition:**
+  - **Advantages:** Good for stable requirements, clear problem decomposition.
+  - **Disadvantages:** Limited in handling evolving systems, can lead to maintenance issues.
+- **Object-Oriented Decomposition:**
+  - **Advantages:** Better for complex and evolving systems, encapsulation offers robustness.
+  - **Disadvantages:** Not explicitly mentioned, but can imply complexity in understanding and implementing.
+
+#### Question 4: How can you recognize “god classes”?
+**Answer:** 
+- **God Classes** can be recognized by their characteristics:
+  - Large classes doing most of the work.
+  - Having numerous responsibilities.
+  - Often having a suffix like “System,” “Manager,” “Controller.”
+
+#### Question 5: What is a responsibility? What is a collaboration?
+**Answer:** 
+- **Responsibility:** Refers to the services or functions an object provides in a system, including the knowledge it maintains and actions it performs.
+- **Collaboration:** Involves interactions between objects to fulfill their responsibilities.
+
+#### Question 6: Name 3 techniques to identify responsibilities.
+**Answer:** 
+1. **Scenarios and Role Play:** Using scenario walk-throughs where different roles are acted out.
+2. **Verb Phrase Identification:** Identifying candidate responsibilities from verb phrases in requirements.
+3. **Class Enumeration:** Listing all candidate classes and assigning initial responsibilities.
+
+#### Question 7: What do feature models define?
+**Answer:** 
+- **Feature Models:** Define a set of reusable and configurable requirements for systems in a domain. They focus on commonalities and variations among the members of a software product line.
+
+#### Question 8: Give two advantages and disadvantages of a “clone and own” approach.
+**Answer:** 
+- **Advantages:** 
+  1. Efficiency - Saves time and reduces costs.
+  2. Independence and immediate availability.
+- **Disadvantages:** 
+  1. Overhead - Difficulty in propagating changes and adapting clones.
+  2. Governance issues - Lack of reuse tracking and organizational processes.
+
+#### Question 9: Explain the main difference between a social fork and a variant fork.
+**Answer:** 
+- **Social Fork:** Involves temporary branching for specific modifications with the intention of merging back into the main branch.
+- **Variant Fork:** Represents a separate, maintained variant of the project, not intended for merging back.
+
+#### Question 10: How does domain modeling help to achieve correctness? Traceability?
+**Answer:** 
+- **Correctness:** By focusing on modeling the problem domain accurately from the customer's perspective and specifying "what" rather than "how."
+- **Traceability:** Through proper naming conventions and modeling, linking requirements directly to system elements like classes and operations.
+
+### Summary (ii)
+
+#### Question 1: How does domain modeling help to validate and analyze the requirements?
+**Answer:**
+- Domain modeling helps validate and analyze requirements by ensuring that the system reflects the real-world aspects it is supposed to model. It focuses on the 'what' (goals) rather than the 'how' (procedures), enabling an accurate representation of the problem domain and ensuring that the system meets its intended purpose.
+
+#### Question 2: What’s the problem with “god classes”?
+**Answer:**
+- "God classes" are problematic because they centralize too many responsibilities, leading to maintenance difficulties, reduced modularity, and decreased flexibility in the system. They are typically large, complex, and difficult to manage, making them prone to errors and challenging to adapt to changing requirements.
+
+#### Question 3: Why are many responsibilities, many collaborators, and deep inheritance hierarchies suspicious?
+**Answer:**
+- Having many responsibilities in a class, numerous collaborators, and deep inheritance hierarchies are suspicious because they often indicate poor design. Such structures can lead to complex, tightly-coupled systems that are hard to maintain, understand, and extend. They can also hinder code reuse and make the system less adaptable to changes.
+
+#### Question 4: Can you explain how role-playing works? Do you think it helps in creative thinking?
+**Answer:**
+- Role-playing in domain modeling involves stakeholders and developers acting out scenarios to understand and validate system requirements and behaviors. It helps in creative thinking by allowing participants to explore different perspectives, identify potential issues, and brainstorm solutions in a collaborative and interactive way.
+
+#### Question 5: Can you compare Use Cases and CRC Cards in terms of the requirements specification process?
+**Answer:**
+- Use Cases and CRC Cards are both used in the requirements specification process but in different ways. Use Cases focus on describing the interactions between users and the system, outlining the steps to accomplish specific goals. CRC Cards, on the other hand, focus on identifying and organizing the responsibilities of different classes in the system and their collaborations. They complement each other, with Use Cases highlighting user interactions and CRC Cards focusing on system structure and behavior.
+
+#### Question 6: Do CRC cards yield the best possible class design? Why not?
+**Answer:**
+- CRC cards do not necessarily yield the best possible class design but are a valuable tool in the design process. They help in identifying and organizing class responsibilities and collaborations, but the effectiveness of the final design also depends on other factors like the complexity of the problem, the skill of the designers, and the evolving nature of requirements.
+
+#### Question 7: Why are CRC cards maintained with paper and pencil instead of electronically?
+**Answer:**
+- CRC cards are often maintained with paper and pencil because this approach facilitates easy modification, reorganization, and collaboration during brainstorming and design sessions. The tangible nature of paper cards allows for a more flexible and interactive design process, encouraging creativity and team involvement.
+
+#### Question 8: What would be the main benefits for thinking in terms of “system families” instead of “one-of-a-kind development”? What would be the main disadvantages?
+**Answer:**
+- **Benefits of thinking in terms of “system families”:**
+  - Encourages reuse of components and features across similar systems.
+  - Facilitates more efficient and consistent development for similar products.
+  - Promotes scalability and adaptability within a product line.
+- **Main disadvantages:**
+  - Increased initial complexity in setting up a product line.
+  - Potential for feature bloat or unnecessary complexity in individual systems.
+  - Challenges in maintaining consistency and compatibility across the product family.
+
+#### Question 9: Can you apply scrum to develop a product line? Argue your case.
+**Answer:**
+- Scrum can be applied to develop a product line as it provides a flexible and iterative approach, which is beneficial for handling the complex and evolving nature of product lines. Scrum's focus on regular feedback, adaptability, and iterative development aligns well with the needs of product line development. However, challenges may include managing the scope of work across the product line and ensuring coherence and compatibility among different products within the line.
