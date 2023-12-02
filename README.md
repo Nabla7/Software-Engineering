@@ -1235,3 +1235,97 @@ goods between hospitals. You must secure the system against cyber-attacks. Your 
 
 #### 12. Where would “testing” fit in the table of core process areas (p. 32). Does it cover a single row or not? Argue why (not)?
    - **Answer**: Testing would fit into multiple rows in the table of core process areas as it is a cross-cutting activity impacting various stages of software development. It is integral to validating the functionality (correctness, reliability, performance, etc.) of software, ensuring that the product meets its specifications and user needs. Testing intersects with requirements management, design, development, and maintenance, reflecting its pervasive role in software quality assurance.
+
+## Week 9 : Metrics
+
+### Summary (i) 
+
+### Answers to Summary (i) Questions
+
+#### 1. Can you give three possible problems of metrics usage in software engineering? How does the measurement theory address them?
+   - **Answer**: 
+     - **Problem 1**: Misinterpretation or misuse of metrics, leading to incorrect conclusions.
+     - **Problem 2**: Overreliance on metrics, neglecting qualitative aspects.
+     - **Problem 3**: Using inappropriate metrics for a given context or goal.
+     - **Measurement Theory Address**: It provides a framework for understanding and interpreting metrics correctly, ensuring they are used appropriately and effectively in different contexts.
+
+#### 2. What’s the distinction between a measure and a metric?
+   - **Answer**: A measure is a quantification of an attribute (like lines of code), whereas a metric is a standard of measurement that combines multiple measures and adheres to certain mathematical properties. Metrics are often more complex and are used to assess or compare attributes.
+
+#### 3. Can you give an example of a direct and an indirect measure?
+   - **Answer**: 
+     - **Direct Measure**: Lines of Code (LOC), which directly measures the length of source code.
+     - **Indirect Measure**: Code Complexity, which is calculated based on multiple direct measures such as the number of decision points.
+
+#### 4. What kind of measurement scale would you need to say “A specification error is worse than a design error”? And what if we want to say “A specification error is twice as bad as a design error?”
+   - **Answer**: 
+     - To say “A specification error is worse than a design error,” an ordinal scale is needed, which allows for ranking or ordering of items.
+     - To claim “A specification error is twice as bad as a design error,” a ratio scale is required, as it allows for expressing the magnitude of difference.
+
+#### 5. Explain the need for a calibration factor in Putnam’s model.
+   - **Answer**: The calibration factor in Putnam’s model adjusts the model to fit the specific context and characteristics of a project. It accounts for variations in team productivity, project complexity, and other environmental factors, thereby enhancing the accuracy of effort and time estimation.
+
+#### 6. Fill in the blanks in the following sentence. Explain briefly based on the Putnam’s model: “If you want to finish earlier (= decrease scheduled time) you should ... the effort ... .”
+   - **Answer**: “If you want to finish earlier (= decrease scheduled time) you should increase the effort significantly.” In Putnam’s model, the relationship between time and effort is non-linear; reducing time increases the required effort disproportionately.
+
+#### 7. Give three metrics for measuring size of a software product.
+   - **Answer**: 
+     - Lines of Code (LOC)
+     - Function Points (FP)
+     - Use Case Points (UCP)
+
+#### 8. Discuss the main advantages and disadvantages of Function Points.
+   - **Answer**: 
+     - **Advantages**: Independent of programming language; focuses on functionality, which is relevant to clients; can be used early in the development cycle.
+     - **Disadvantages**: Requires expert judgment and can be subjective; not automatically calculable; may not be as effective for non-data processing applications.
+
+#### 9. What does it mean for a coupling metric not to satisfy the representation condition?
+   - **Answer**: If a coupling metric does not satisfy the representation condition, it means the metric does not accurately represent the concept it is intended to measure. For example, a high coupling metric might not necessarily indicate poor design if the coupling is essential for functionality.
+
+#### 10. Can you give 3 examples of impreciseness in Lines of Code measurements?
+   - **Answer**: 
+     - **Example 1**: Variations in coding styles can lead to different LOC for the same functionality.
+     - **Example 2**: LOC does not account for the complexity or quality of the code.
+     - **Example 3**: LOC is language-dependent; more verbose languages will naturally have higher LOC for the same functionality.
+
+### Answers to Summary (ii) Questions
+
+#### 1. During which phases in a software project would you use metrics?
+   - **Answer**: Metrics can be used in various phases of a software project, including:
+     - **Requirements Phase**: for estimating size and complexity of the project.
+     - **Design and Development Phase**: for tracking progress, code quality, and adherence to standards.
+     - **Testing Phase**: for measuring defect density and identifying areas needing improvement.
+     - **Maintenance Phase**: for assessing the impact of changes and the maintainability of the software.
+
+#### 2. Why is it so important to have “good” product size metrics?
+   - **Answer**: Good product size metrics are crucial as they provide a basis for estimating effort, cost, and time requirements, help in tracking and improving productivity, and facilitate better project planning and resource allocation.
+
+#### 3. Can you explain the two levels of calibration in COCOMO (i.e., C & S vs. M)? How can you derive actual values for these parameters?
+   - **Answer**: COCOMO involves two levels of calibration:
+     - **C & S**: These are project-independent parameters determined through regression analysis of historical project data, reflecting typical project characteristics.
+     - **M**: This is the project-specific calibration factor adjusted for each project based on its specific attributes and constraints.
+     - To derive actual values, analyze past project data or industry benchmarks and adjust based on specific project factors.
+
+#### 4. Can you motivate why in software engineering productivity depends on the scheduled time? Do you have an explanation for it?
+   - **Answer**: In software engineering, productivity depends on scheduled time due to the non-linear relationship between time and effort. Reducing time increases the required effort disproportionately, impacting productivity. This relationship is explained by models like Putnam’s model.
+
+#### 5. Can you explain the cone of uncertainty? And why is it so relevant to cost estimation in software projects?
+   - **Answer**: The cone of uncertainty represents the evolution of uncertainty in a project. It decreases as the project progresses and more information becomes available. It's relevant for cost estimation as it illustrates the risks and uncertainties involved in early estimates, guiding more accurate forecasting as the project advances.
+
+#### 6. How can you decrease the uncertainty of a project bid using Putnam’s model?
+   - **Answer**: To decrease the uncertainty in a project bid using Putnam’s model, one should gather as much detailed and accurate information as possible about the project's scope, complexity, and constraints. Adjusting the calibration factor based on this information can lead to more accurate estimates.
+
+#### 7. Why do we prefer measuring Internal Product Attributes instead of External Product Attributes during Quality Control? What is the main disadvantage of doing that?
+   - **Answer**: Internal Product Attributes are preferred during Quality Control because they are directly controllable and measurable by the development team. However, the main disadvantage is that they may not fully represent the user perspective or the external quality experienced by users.
+
+#### 8. You are a project manager and you want to convince your project team to apply algorithmic cost modeling. How would you explain the technique?
+   - **Answer**: Algorithmic cost modeling uses mathematical models to estimate project costs based on various project factors like size, complexity, team skill, and technology. It provides a systematic, data-driven approach for effort and cost estimation, allowing for more accurate planning and budgeting.
+
+#### 9. Where would you fit coupling/cohesion metrics in a hierarchical quality model like ISO 9126?
+   - **Answer**: In the ISO 9126 hierarchical quality model, coupling/cohesion metrics would fit under the 'Maintainability' characteristic. These metrics assess the interdependence of modules (coupling) and the unity of operations within a module (cohesion), which are crucial for maintainability.
+
+#### 10. Why are coupling/cohesion metrics important? Why then are they so rarely used?
+   - **Answer**: Coupling/cohesion metrics are important as they give insight into the software structure, affecting maintainability and flexibility. However, they are rarely used due to their complexity in measurement and interpretation, and the difficulty in defining universal standards applicable across different projects.
+
+#### 11. Do you believe that “defect density” says something about the correctness of a program? Motivate your answer.
+   - **Answer**: Defect density does provide some indication of a program's correctness, as it measures the number of defects relative to the size of the software. A higher defect density may suggest lower correctness. However, it should be interpreted cautiously, as it depends on the thoroughness of testing and defect discovery processes.
