@@ -1329,3 +1329,44 @@ goods between hospitals. You must secure the system against cyber-attacks. Your 
 
 #### 11. Do you believe that “defect density” says something about the correctness of a program? Motivate your answer.
    - **Answer**: Defect density does provide some indication of a program's correctness, as it measures the number of defects relative to the size of the software. A higher defect density may suggest lower correctness. However, it should be interpreted cautiously, as it depends on the thoroughness of testing and defect discovery processes.
+
+### Probable Answers to Given Tasks
+
+#### Task 1 : Two classes A & B have a common parent class X. Class A defines a method a() and class B a method b() and there is a large portion of duplicated code between the two methods. Give a sequence of refactorings that moves the duplicated code in a separate method x() defined on the common superclass X.
+
+1. **Identify and Extract Duplicated Code**:
+   - Review the methods `a()` in class A and `b()` in class B to identify the duplicated code.
+
+2. **Create a New Method in Class X**:
+   - Create a new method `x()` in the common parent class X.
+
+3. **Move Duplicated Code to the New Method**:
+   - Move the duplicated code from both `a()` and `b()` into `x()`.
+
+4. **Replace Duplicated Code with Method Call**:
+   - Replace the original duplicated code in `a()` and `b()` with a call to the new method `x()`.
+
+5. **Test the Changes**:
+   - Test classes A and B to ensure that they still function correctly after the refactoring.
+
+#### Task 2: What would you do in the above situation if the duplicated code in the methods a() and b() are the same except for the name and type of a third object which they delegate responsibilities too?
+
+1. **Identify the Variation**:
+   - Identify the differing object names and types in the duplicated code within methods `a()` and `b()`.
+
+2. **Create an Abstract Method in Class X**:
+   - Define an abstract method in class X, say `delegateMethod()`, that handles the varying part.
+
+3. **Implement the Abstract Method in A & B**:
+   - Implement `delegateMethod()` in both classes A and B, each handling the object specific to their method (`a()` or `b()`).
+
+4. **Refactor Methods a() and b()**:
+   - Extract the common duplicated code into a new method `x()` in class X, replacing the varying parts with calls to `delegateMethod()`.
+
+5. **Replace Duplicated Code in a() and b()**:
+   - Replace the original duplicated code in `a()` and `b()` with calls to `x()`.
+
+6. **Test the Changes**:
+   - Test classes A and B to ensure the refactoring has not altered the intended behavior of methods `a()` and `b()`.
+
+These steps would allow the duplicated code to be centralized in the superclass while handling variations through polymorphic methods in the subclasses.
