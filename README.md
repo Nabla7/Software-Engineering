@@ -1125,3 +1125,113 @@ goods between hospitals. You must secure the system against cyber-attacks. Your 
 #### Question 9: Can you apply scrum to develop a product line? Argue your case.
 **Answer:**
 - Scrum can be applied to develop a product line as it provides a flexible and iterative approach, which is beneficial for handling the complex and evolving nature of product lines. Scrum's focus on regular feedback, adaptability, and iterative development aligns well with the needs of product line development. However, challenges may include managing the scope of work across the product line and ensuring coherence and compatibility among different products within the line.
+
+## Week 8 : Software Quality
+
+### Summary (i) 
+
+### Answers to Summary (i) Questions
+
+#### 1. Why is software quality more important than it was a decade ago?
+   - **Answer**: Software quality has become increasingly important due to several factors including the ubiquitous nature of software in modern life, the complexity of contemporary software systems, the critical role software plays in safety and security, and the economic impact of software failures. The reliance on software for essential functions in business, healthcare, transportation, and communication means that software quality directly impacts functionality, user satisfaction, and safety.
+
+#### 2. Can a correctly functioning piece of software still have poor quality? Why?
+   - **Answer**: Yes, a software can function correctly and still have poor quality. This is because software quality encompasses more than just functional correctness. It includes aspects like usability, maintainability, performance, reliability, and security. A software may meet its functional requirements but may be difficult to use, maintain, or scale, may perform poorly, or may have security vulnerabilities, all of which contribute to poor overall quality.
+
+#### 3. If quality control can’t guarantee results why do we bother?
+   - **Answer**: Quality control is important even if it can't guarantee perfect results because it significantly reduces the likelihood of defects, improves the overall quality of the product, and helps in identifying and fixing issues early in the development process. This prevention and early detection reduce costs, improve customer satisfaction, and enhance the reputation of the organization.
+
+#### 4. What’s the difference between an external and an internal quality attribute? And between a product and a process attribute?
+   - **Answer**: 
+     - **External vs. Internal Quality Attributes**: External quality attributes are those that are visible to the user, like usability, reliability, and performance. Internal quality attributes, on the other hand, are inherent to the software system and not directly visible to the user, such as modularity, readability, and testability.
+     - **Product vs. Process Attribute**: Product attributes are characteristics that relate to the software product itself, like functionality, reliability, and usability. Process attributes pertain to the process used to develop the software, like efficiency, documentation quality, and compliance with standards.
+
+#### 5. What’s the distinction between correctness, reliability, and robustness?
+   - **Answer**: 
+     - **Correctness** refers to the software’s ability to perform its intended functions accurately as per the specifications.
+     - **Reliability** is the measure of the software's ability to function under predetermined conditions for a specified period.
+     - **Robustness** is the ability of the software to handle errors or unexpected inputs gracefully and maintain stable operation.
+
+#### 6. How can you express the “user friendliness” of a system?
+   - **Answer**: User friendliness of a system can be expressed in terms of its usability. This includes the system's ease of use, intuitiveness, consistency in design, clarity of user interface, availability of help and documentation, and the system’s ability to cater to the needs of its intended users efficiently and effectively.
+
+#### 7. Can you name three distinct refinements of “maintainability”? What do each of these names mean?
+   - **Answer**: 
+     - **Repairability**: The ease with which defects or issues in the software can be fixed.
+     - **Adaptability (Evolvability)**: The ability of the software to evolve and adapt to changing requirements or environments.
+     - **Portability**: The ease with which the software can be transferred from one environment or system to another.
+
+#### 8. What is meant with “short time to market”? Can you name 3 related quality attributes and provide definitions for each of them?
+   - **Answer**: "Short time to market" refers to the ability to develop and release software products quickly to meet market demands or take advantage of market opportunities. Three related quality attributes are:
+     - **Productivity**: The efficiency with which software is produced.
+     - **Timeliness**: The ability to deliver software on or before the agreed deadline.
+     - **Visibility**: The transparency and accessibility of the software development process to stakeholders.
+
+#### 9. Name four things which should be recorded in the review minutes.
+   - **Answer**:
+     - What was reviewed.
+     - Who reviewed it.
+     - The findings and conclusions of the review.
+     - Decisions made during the review, such as acceptance, provisional acceptance, or rejection of the reviewed item.
+
+#### 10. Explain briefly the three items that should be included in a quality plan.
+   - **Answer**:
+     - Desired product qualities and methods for their assessment.
+     - Significant quality attributes specific to the project.
+     - The quality assessment process, including standards to be applied and quality review methods.
+
+#### 11. What’s the relationship between ISO9001, CMMI standards, and an organization’s quality system? How do you get certified?
+   - **Answer**: ISO9001 and CMMI standards provide frameworks for quality management and process improvement. They guide organizations
+
+ in establishing a quality system that ensures consistent quality and continuous improvement. To get certified, an organization must implement these standards and then undergo an external audit by a certified body to verify compliance.
+
+#### 12. Can you name and define the 5 levels of CMMI?
+   - **Answer**: 
+     - **Level 1 - Initial**: Processes are ad hoc and chaotic. Success depends on individual effort.
+     - **Level 2 - Managed**: Processes are planned and executed in accordance with policy; there are basic project management processes.
+     - **Level 3 - Defined**: Processes are well characterized and understood, and are described in standards, procedures, tools, and methods.
+     - **Level 4 - Quantitatively Managed**: Processes are controlled using statistical and other quantitative techniques.
+     - **Level 5 - Optimizing**: Focus on continuous process improvement, enabled by quantitative feedback and from piloting innovative ideas and technologies.
+
+#### 13. Where would “use-cases” as defined in chapter 3 fit in the table of core process areas (p. 32)? Motivate your answer shortly.
+   - **Answer**: Use-cases would fit under "Requirements Management" in the table of core process areas. They are instrumental in defining and managing the requirements of a project, providing a clear and detailed description of how users will interact with the system and the expected outcomes of these interactions.
+
+### Summary (ii)
+
+### Answers to Summary (ii) Questions
+
+#### 1. Given a piece of code and a coding standard, review the code to verify whether the standard has been adhered to.
+   - **Task Description**: This task involves a meticulous examination of the provided code against the specified coding standard. The review process should focus on assessing adherence to coding conventions, including naming standards, commenting practices, code structure, and any specific programming practices outlined in the standard.
+
+#### 2. Given the Quality Attributes Overview table, argue why the crosses and blanks occur at the given positions.
+   - **Answer**: The crosses and blanks in the Quality Attributes Overview table represent the presence or absence of specific quality attributes in different contexts. Crosses indicate where a particular quality attribute is relevant or applicable, while blanks signify its irrelevance or non-applicability in that context. The placement of crosses and blanks reflects the specific characteristics and requirements of the software system and the project environment.
+
+#### 3. Why do quality standards focus on process and internal attributes instead of the desired external product attributes?
+   - **Answer**: Quality standards focus on process and internal attributes because these are foundational to achieving desired external product attributes. A well-defined and controlled process ensures consistent quality and efficiency in development. Internal attributes like code maintainability, modularity, and readability are crucial for long-term product stability and scalability. By emphasizing these aspects, quality standards aim to create a solid foundation that naturally leads to high-quality external product attributes.
+
+#### 4. Why do you need a quality plan? Which topics should be covered in such a plan?
+   - **Answer**: A quality plan is necessary to define and guide the quality assurance and control processes within a project. It should cover topics such as the desired quality attributes of the product, significant quality metrics, the standards and methodologies to be used for quality assurance, roles and responsibilities for quality management, and procedures for monitoring and improving quality throughout the project lifecycle.
+
+#### 5. How should you organize and run a review meeting?
+   - **Answer**: A review meeting should be organized with a clear agenda, objectives, and a defined participant list. The meeting should be time-bound, with sufficient preparation by all participants. A moderator should guide the meeting, ensuring adherence to the agenda and facilitating discussions. Key points, decisions, and action items should be documented in the review minutes.
+
+#### 6. Why are coding standards important?
+   - **Answer**: Coding standards are important as they ensure consistency, readability, and maintainability of code. They facilitate collaboration among developers, make the codebase more understandable and navigable, and help in identifying issues more easily. Adhering to coding standards also improves the overall quality and reliability of the software.
+
+#### 7. What would you include in a documentation review checklist?
+   - **Answer**: A documentation review checklist should include items such as completeness and accuracy of information, clarity and readability, consistency in format and terminology, adherence to documentation standards, correctness of technical details, and up-to-date references and links.
+
+#### 8. How often should reviews be scheduled?
+   - **Answer**: The frequency of reviews should be based on the complexity and duration of the project, criticality of the components being developed, and the stage of the project lifecycle. Regular reviews are crucial for early detection of issues and ensuring alignment with project goals.
+
+#### 9. Could you create a review checklist for ATAM (Architecture Tradeoff Analysis Method)?
+   - **Answer**: Creating a review checklist for ATAM involves identifying key architectural decisions, assessing trade-offs between competing quality attributes, evaluating risk and sensitivity points, and ensuring alignment with business goals. The checklist would include items specific to architectural approaches, scalability, performance, security, maintainability, and stakeholder priorities.
+
+#### 10. Would you trust software from an ISO 9000 certified company? And if it were CMMI?
+   - **Answer**: Trust in software from an ISO 9000 or CMMI certified company would be higher as these certifications indicate a commitment to quality management and process improvement. However, it's important to note that these certifications focus more on processes than the final product quality, so a holistic evaluation including product performance and user feedback would be advisable.
+
+#### 11. You are supposed to develop a quality system for your organization. What would you include?
+   - **Answer**: Developing a quality system would involve establishing quality policies, objectives, processes, and metrics. It should include procedures for quality control and assurance, standards for software development and documentation, training programs for staff, mechanisms for continuous improvement, and methods for monitoring and measuring quality performance.
+
+#### 12. Where would “testing” fit in the table of core process areas (p. 32). Does it cover a single row or not? Argue why (not)?
+   - **Answer**: Testing would fit into multiple rows in the table of core process areas as it is a cross-cutting activity impacting various stages of software development. It is integral to validating the functionality (correctness, reliability, performance, etc.) of software, ensuring that the product meets its specifications and user needs. Testing intersects with requirements management, design, development, and maintenance, reflecting its pervasive role in software quality assurance.
